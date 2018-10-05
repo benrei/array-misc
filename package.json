@@ -1,0 +1,28 @@
+{
+  "name": "array-misc",
+  "version": "0.1.0",
+  "description": "Array utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benrei/array-misc.git"
+  },
+  "keywords": [
+    "array",
+    "utils",
+    "compare",
+    "shift",
+    "move",
+    "up",
+    "down"
+  ],
+  "author": "Benjamin Reiersølmoen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benrei/array-misc/issues"
+  },
+  "homepage": "https://github.com/benrei/array-misc#readme"
+}
