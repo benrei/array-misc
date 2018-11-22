@@ -57,6 +57,15 @@ function findArrValuesNotFoundInOtherArr(arr, otherArr, sort = false) {
   return ret;
 }
 
+function groupBy(arr, property) {
+  return arr.reduce(function(memo, x) {
+    if (!memo[x[property]]) { memo[x[property]] = []; }
+    memo[x[property]].push(x);
+    return memo;
+  }, {});
+}
+
+module.exports.groupBy = groupBy;
 module.exports.shift = shift;
 module.exports.down = down;
 module.exports.up = up;
