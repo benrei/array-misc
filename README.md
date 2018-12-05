@@ -49,6 +49,15 @@ arrayMisc.custom(arr, 0, 4)
 console.log(arr); // -> [2,3,4,5,1]
 ```
 
+
+#### RemoveItem
+```js
+var arr = [1,2,3,4,5];
+
+arrayMisc.removeItem(2, arr)
+console.log(arr); // -> [1,3,4,5]
+```
+
 #### GroupBy
 ```js
 var arr = [

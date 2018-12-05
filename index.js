@@ -65,6 +65,14 @@ function groupBy(arr, property) {
   }, {});
 }
 
+function removeItem(element, array){
+  var index = array.indexOf(element);
+  if (index > -1) {
+    array.splice(index, 1);
+  }
+}
+
+module.exports.removeItem = removeItem;
 module.exports.groupBy = groupBy;
 module.exports.shift = shift;
 module.exports.down = down;
