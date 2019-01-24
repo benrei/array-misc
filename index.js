@@ -46,6 +46,20 @@ function findNotCommonValues(arr, otherArr, sort = false) {
   return ret;
 }
 
+function getElementsNotFoundInOtherArrayByComparingPropValues(array, arrayProp, otherArray, otherArrayProp) {
+  let arrayValues = array.map(a=>a[arrayProp]);
+  let otherArrayValues = otherArray.map(a=>a[otherArrayProp]);
+
+  let arrayValuesNotFoundInOtherArray = findArrValuesNotFoundInOtherArr(arrayValues, otherArrayValues);
+  let result = [];
+  arrayValuesNotFoundInOtherArray.forEach(value=>{
+    let element = array.find(a=>a[arrayProp] === value);
+    result.push(element)
+  });
+  return result;
+}
+
+
 function findArrValuesNotFoundInOtherArr(arr, otherArr, sort = false) {
   var ret = [];
   for(var j in arr) {
@@ -80,3 +94,4 @@ module.exports.up = up;
 module.exports.findCommonValues = findCommonValues;
 module.exports.findNotCommonValues = findNotCommonValues;
 module.exports.findArrValuesNotFoundInOtherArr = findArrValuesNotFoundInOtherArr;
+module.exports.getElementsNotFoundInOtherArrayByComparingPropValues = getElementsNotFoundInOtherArrayByComparingPropValues;

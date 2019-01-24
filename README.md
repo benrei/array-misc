@@ -25,7 +25,7 @@ arrayMisc.someFuntion();
 ```
 
 
-#### Up
+#### up
 ```js
 var arr = [1,2,3,4,5];
 
@@ -33,7 +33,7 @@ arrayMisc.up(arr, 4);
 console.log(arr); // -> [1,2,3,5,4]
 ```
 
-#### Down
+#### down
 ```js
 var arr = [1,2,3,4,5];
 
@@ -41,7 +41,7 @@ arrayMisc.down(arr, 0);
 console.log(arr); // -> [2,1,3,4,5]
 ```
 
-#### Custom
+#### custom
 ```js
 var arr = [1,2,3,4,5];
 
@@ -50,7 +50,7 @@ console.log(arr); // -> [2,3,4,5,1]
 ```
 
 
-#### RemoveItem
+#### removeItem
 ```js
 var arr = [1,2,3,4,5];
 
@@ -58,7 +58,15 @@ arrayMisc.removeItem(2, arr)
 console.log(arr); // -> [1,3,4,5]
 ```
 
-#### GroupBy
+#### getElementsNotFoundInOtherArrayByComparingPropValues
+```js
+var arr = [{id:"1", title:"First"},{id:"2", title:"Second"},{id:"3", title:"Third"}];
+var otherArr = [{id:"2", title:"Second"},{id:"3", title:"Third"},{id:"4", title:"Fourth"}];
+var result = arrayMisc.getElementsNotFoundInOtherArrayByComparingPropValues(arr, 'id', otherArr, 'id');
+console.log(result) // => [{id:"4", title:"Fourth"}]
+```
+
+#### groupBy
 ```js
 var arr = [
     {type:"orange", title:"First"},
