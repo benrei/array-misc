@@ -60,6 +60,16 @@ function getElementsNotFoundInOtherArrayByComparingPropValues(array, arrayProp, 
 }
 
 
+function filterArrayPropValuesByOtherArrayPropValues(array, arrayProp, otherArray, otherArrayProp) {
+  let result = [];
+  array.forEach(element=>{
+    let found = otherArray.find(oA=>oA[otherArrayProp] === element[arrayProp]);
+    if(found) result.push(element)
+  });
+  return result;
+}
+
+
 function findArrValuesNotFoundInOtherArr(arr, otherArr, sort = false) {
   var ret = [];
   for(var j in arr) {
@@ -94,4 +104,5 @@ module.exports.up = up;
 module.exports.findCommonValues = findCommonValues;
 module.exports.findNotCommonValues = findNotCommonValues;
 module.exports.findArrValuesNotFoundInOtherArr = findArrValuesNotFoundInOtherArr;
+module.exports.filterArrayPropValuesByOtherArrayPropValues = filterArrayPropValuesByOtherArrayPropValues;
 module.exports.getElementsNotFoundInOtherArrayByComparingPropValues = getElementsNotFoundInOtherArrayByComparingPropValues;

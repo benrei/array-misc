@@ -66,6 +66,14 @@ var result = arrayMisc.getElementsNotFoundInOtherArrayByComparingPropValues(arr,
 console.log(result) // => [{id:"4", title:"Fourth"}]
 ```
 
+#### filterArrayPropValuesByOtherArrayPropValues
+```js
+var arr = [{id:"1", title:"First"},{id:"2", title:"Second"},{id:"3", title:"Third"}];
+var otherArr = [{objectId:"2", title:"Second"},{objectId:"3", title:"Third"},{objectId:"4", title:"Fourth"}];
+var result = arrayMisc.filterArrayPropValuesByOtherArrayPropValues(arr, 'id', otherArr, 'objectId');
+console.log(result) // => [{id:"2", title:"Second"},{id:"3", title:"Third"}]
+```
+
 #### groupBy
 ```js
 var arr = [
